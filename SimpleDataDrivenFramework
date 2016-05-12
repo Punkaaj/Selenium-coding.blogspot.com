@@ -49,21 +49,12 @@ public class SimpleDataDrivenFramework {
 			Workbook wb = Workbook.getWorkbook(new File("D:\\path\\to\\excel\\sheet\\DataDriver1.xls"));
 			Sheet sh = wb.getSheet(0); // zero selects first worksheet from the
 										// excelsheet.
-			o = new Object[sh.getRows()][sh.getColumns()]; // initialized the
-															// object with total
-															// no. of rows and
-															// columns present
-															// in the selected
-															// sheet (sheet
-															// zero).
+			o = new Object[sh.getRows()][sh.getColumns()]; // initialized the object with total no. of rows and
+								       // columns present in the selected sheet (sheet zero).
 			for (int i = 0; i < sh.getRows(); i++) { // loop for rows.
 				for (int j = 0; j < sh.getColumns(); j++) { // loop for cols.
-					o[i][j] = sh.getCell(j, i).getContents(); // getcell
-																// function
-																// first
-																// argument is
-																// columns and
-																// then rows.
+					o[i][j] = sh.getCell(j, i).getContents(); // getcell 
+					// function first argument is columns and then rows.
 					// In array we have first row and then column.that is why
 					// reverse of j and i is present.
 				}
