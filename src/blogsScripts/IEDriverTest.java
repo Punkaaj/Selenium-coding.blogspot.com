@@ -26,11 +26,11 @@ public class IEDriverTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		System.setProperty("webdriver.ie.driver",
-				"D:\\bckup\\Documents\\Documents\\Selenium\\InternetExplorerDriver\\IEDriverServer_x64_2.53.0\\IEDriverServer.exe");
+				"D:\\bckup\\Documents\\Documents\\Selenium\\InternetExplorerDriver\\IEDriverServer_Win32_2.53.1\\IEDriverServer.exe");
 		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-		capabilities.setCapability("requireWindowFocus", true);
+//		capabilities.setCapability("requireWindowFocus", true);
 		driver = new InternetExplorerDriver(capabilities);
+//		driver = new InternetExplorerDriver();
 		driver.get("http://newtours.demoaut.com/");
 		driver.manage().window().maximize();
 	}
