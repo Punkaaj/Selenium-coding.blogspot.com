@@ -28,9 +28,7 @@ public class IEDriverTest {
 		System.setProperty("webdriver.ie.driver",
 				"D:\\bckup\\Documents\\Documents\\Selenium\\InternetExplorerDriver\\IEDriverServer_Win32_2.53.1\\IEDriverServer.exe");
 		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-//		capabilities.setCapability("requireWindowFocus", true);
 		driver = new InternetExplorerDriver(capabilities);
-//		driver = new InternetExplorerDriver();
 		driver.get("http://newtours.demoaut.com/");
 		driver.manage().window().maximize();
 	}
